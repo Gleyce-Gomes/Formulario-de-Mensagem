@@ -1,0 +1,75 @@
+*,::after,::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(-120deg,#772362, #11031f);
+}
+body,textarea{
+    font-family: sans-serif;
+}
+
+.container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100vh;
+}
+.form_box{
+    display: flex;
+    flex-direction: column; /*elementos um embaixo do outro (em coluna)*/
+    background-color: #fff;
+    border-radius: 8px;
+    width: 700px;
+}
+.form_box .title{
+    padding: 24px 32px;
+    font-size: 24px;
+    border-bottom: thin solid #ccc;
+}
+.form_box form{
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap; /*quebra a linha se os itens não couberem na mesma*/
+    padding: 32px;
+}
+
+.form_box input, .form_box textarea{
+    width: calc(50% - 8px);
+    height: 48px;
+    border-radius: 8px; /*deixa as bordas arredondadas*/
+    border: thin solid #999;/* Cria uma borda fina de cor cinza */
+    padding-left: 16px; /*adiciona espaço interno à esquerda*/
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.form_box form input:first-child{ /*somente o 1 input sera modificado*/
+    margin-right: 16px;
+}
+.form_box input[name=subject]{
+    width: 100%;
+}
+.form_box textarea{
+    width: 100%;
+    height: 180px;
+    padding: 16px;
+}
+.form_box button{
+    display: block; /*faz o botão ocupar toda a linha*/
+    border: none; /*tira a borda padrao*/
+    outline: none; /*tira o contorno ao clicar*/
+    width: 180px;
+    height: 48px;
+    border-radius: 8px; /*deixa as bordas arredondadas*/
+    background-color: #772362;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold; /*deixa o texto em negrito*/
+    cursor: pointer; /*mostra a mãozinha quando passa o mouse*/
+}
+.form_box button:hover{
+    background-color: #3c0d2e;
+}
